@@ -24,3 +24,117 @@ for(int low = 0; low<n; low++)
 
 
 
+int n = X.length;
+int[] sumto = new int[n];
+sumto[0] = X[0]
+
+    for(int p =1; p < n; p++)
+       sumto[p] = sumto[p - 1] + X[p];
+
+    int maxsofar = 0;
+      for(int low =0; low<n; low++)
+        for(int high =low; high<n; high ++)
+            int sum;
+
+            if(low==0)
+             sum = sumto[high]
+            else sum = sumto[high]-sumto[low-1]
+
+            if(sum > maxsofar)
+             sum = maxsofar;
+
+
+
+
+static int MCSDEVIDE(int[] X, int low, int high)
+        if(low>high) return 0;
+        if( low==high)
+        return Math.max(0,X[low])
+
+        int mid = (low+high)/2;
+        int left = DEVIDE(X,low,mid)
+        int right = DEVIDE(X, mid+1, high)
+        int cross = merge(X, left, mid, right)
+
+        return Math.max(Math.max(left,right), cross)
+
+        static int marge(int[] X, int left, int mid, int high)
+        int mid = (low+high)/2;
+        int sum =0;
+        int maxsofar=0;
+
+        for(int low =0; low>mid; low--)
+        sum+=X[low]
+
+        if(sum > maxsofar)
+        return maxsofar;
+
+        int sum =0;
+        int maxtoright=0;
+
+        for(int high=0; high <mid; high++)
+            sum+=X[high];
+         if(sum = maxtoright)
+            return maxsofar + maxtoright;
+
+
+
+    static int MCSON(int[] X)
+        int n = X.length;
+        int maxsofar = 0;
+        int maxtohere = 0;
+
+     for( int i = 0; i<n; i++)
+         maxtohere = Math.max(mathtohere + X[i],0)
+         maxsofar = Math.max(maxsofar, maxtohere)
+
+                return maxsofar,
+
+
+
+
+public static void merge(int[] X,int low, int high)
+            if(low<high)
+            int mid = (low+high)/2;
+            int left = merge(X,low,mid)
+            int right = merge(X,mid+1,high)
+            int cross = merge1(X,low,mid,high)
+
+        static void merge1(int[] X, int left, int right, int mid)
+                    int L1 = left -  mid+1
+                    int R1 = mid - right
+
+                    int[] L = new int[L1]
+                    int[] R = new int[R1]
+
+            for(int i=0; i<L1;i++)
+                L[i] = X[left+1]
+
+            for(int j=0; j<R1;j++)
+                R[i] = X[mid+1+j]
+
+            int i=0;
+            int j=0;
+            int k=0;
+
+            while(i<Li && j<R1)
+                if(L[i]<=R[j])
+                   X[k] = L[i]
+                    k++;
+            else X[k] = R[i]
+                j++;
+                k++;
+
+            while(i<L1)
+                X[k] = L[i]
+                  i++;
+                  k++;
+
+            while(j<R1)
+                X[k] = R[j]
+                  j++;
+                  k++;
+
+                                 
+
+    
